@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Prity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            background-image: url('https://via.placeholder.com/1500x800/ffb3cc/ffffff'); /* Change to a suitable background image */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 4rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .countdown {
+            font-size: 24px;
+            color: #d63384;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .message {
+            font-size: 20px;
+            margin: 20px;
+            color: #333;
+            font-weight: 600;
+            animation: slideUp 2s ease-out;
+        }
+        .heart {
+            font-size: 100px;
+            color: #ff4081;
+            animation: heartbeat 1.5s infinite alternate;
+        }
+        audio {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #d63384;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Anzuman Ara Prity! 🎉</h1>
+    <p class="message">You are the light of my life, and I am so grateful to have you by my side. Happy birthday, my love! 💖</p>
+    
+    <div class="countdown" id="countdown"></div>
+    
+    <div class="gallery">
+        <img src="https://github.com/nahidrabbe01732/You-and-Me.html/blob/59ffaea7ffdc6c09cdf788e556806af939cd5fba/prity.JPG?raw=true" alt="Prity">
+        <img src="https://github.com/nahidrabbe01732/You-and-Me.html/blob/59ffaea7ffdc6c09cdf788e556806af939cd5fba/couple.JPG?raw=true" alt="Us Together">
+    </div>
+    
+    <div class="heart">❤️</div>
+    
+    <a href="https://example.com" class="button">Wish Prity!</a>
+    
+    <script>
+        function countdownTimer() {
+            const birthday = new Date('March 28, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = birthday - now;
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `🎂 ${days}d ${hours}h ${minutes}m ${seconds}s until Prity's Birthday! 🎉`;
+            
+            setTimeout(countdownTimer, 1000);
+        }
+        countdownTimer();
+    </script>
+</body>
+</html>
